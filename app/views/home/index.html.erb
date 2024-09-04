@@ -1,0 +1,12 @@
+<h1 style="color: darkblue">D2C For you</h1>
+<!--<p>Find me in app/views/home/index.html.erb</p>-->
+<h1 style="color : greenyellow">Welcome to your App</h1>
+
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.email %>!</p>
+  <!--<%= link_to 'Log out', destroy_user_session_path, method: :delete %>-->
+  <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign up', new_user_registration_path %> |
+  <%= link_to 'Log in', new_user_session_path %>
+<% end %>
