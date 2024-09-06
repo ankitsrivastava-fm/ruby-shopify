@@ -1,0 +1,39 @@
+/* Add custom styles for the store details */
+.text-primary {
+    color: #007bff !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.store-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-title {
+    color: #fd7e14;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.card-text {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.card-text strong {
+    color: #495057;
+}
+
+.card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}

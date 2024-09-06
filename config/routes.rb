@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   get 'stores/new'
   get 'stores/create'
   get 'stores/show'
