@@ -1,0 +1,6 @@
+<div class="container text-center">
+  <h1>Welcome, <%= current_user.email %>!</h1>
+  <p>Get started by creating your store.</p>
+  <%= link_to "Create Store", new_store_path, class: "btn btn-success" %>
+</div>
+

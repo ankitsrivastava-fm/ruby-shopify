@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-primary">Create Your Store</h2>
+      <%= form_with(model: @store, local: true, html: { multipart: true, class: "bg-light p-4 rounded" }) do |form| %>
+        <div class="form-group mb-3">
+          <%= form.label :name, class: "form-label" %>
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.label :logo, class: "form-label" %>
+          <%= form.file_field :logo, class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.label :description, class: "form-label" %>
+          <%= form.text_field :description, class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.label :address, class: "form-label" %>
+          <%= form.text_field :address, class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.label :currency, class: "form-label" %>
+          <%= form.select :currency, ['USD', 'EUR', 'GBP', 'JPY', 'INR'], class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.label :timezone, class: "form-label" %>
+          <%= form.time_zone_select :timezone, [], class: "form-control" %>
+        </div>
+
+        <div class="form-group mb-3">
+          <%= form.submit "Create Store", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
