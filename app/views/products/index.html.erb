@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 class="my-4">All Products</h2>
+
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3><%= link_to product.name, store_product_path(@store, product) %></h3>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= truncate(product.description, length: 100) %></p>
+            <% if product.image.attached? %>
+              <%= image_tag product.image, class: "img-fluid" %>
+            <% end %>
+            <p><strong>Price:</strong> $<%= product.price %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to "Edit", edit_store_product_path(@store, product), class: "btn btn-secondary" %>
+            <%= link_to "Delete", store_product_path(@store, product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "Add New Product", new_store_product_path(@store), class: "btn btn-primary" %>
+</div>
