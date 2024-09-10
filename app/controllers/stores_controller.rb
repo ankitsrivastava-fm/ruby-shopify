@@ -15,7 +15,12 @@ class StoresController < ApplicationController
 
   def show
     @store = current_user.store
+    #@store = Store.find_by(id: params[:id])
+    if @store.nil? || @store.id != params[:id].to_i
+      flash.now[:alert] = "Store not found."
+    end
   end
+
 
   private
   def store_params
