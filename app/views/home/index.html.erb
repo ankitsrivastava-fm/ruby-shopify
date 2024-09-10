@@ -8,6 +8,11 @@
     <% if user_signed_in? %>
       <p>Hello, <%= current_user.email %>!</p>
       <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+      <% if current_user.store.present? %>
+        <%= link_to 'Your Store', store_path(current_user.store), class: "btn btn-info mt-3" %>
+      <% else %>
+        <%= link_to 'Create Your Store', new_store_path, class: "btn btn-info mt-3" %>
+      <% end %>
     <% else %>
       <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %> |
       <%= link_to 'Log in', new_user_session_path, class: "btn btn-secondary" %>

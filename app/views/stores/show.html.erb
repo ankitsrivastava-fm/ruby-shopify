@@ -17,6 +17,9 @@
           <div class="store-logo mt-3">
             <%= image_tag @store.logo, class: "img-fluid" %>
           </div>
+          <div class="mt-4">
+            <%= link_to 'View Products', store_products_path(@store), class: "btn btn-primary" %>
+          </div>
 
         </div>
       </div>
