@@ -18,8 +18,8 @@
       </div>
     </div>
     <div class="card-footer">
-      <%= link_to "Edit", edit_store_product_path(@store, @product), class: "btn btn-secondary" %>
-      <%= link_to "Delete", store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+      <%= link_to "Edit product", edit_store_product_path(@store, @product), class: "btn btn-secondary" %>
+      <%= link_to "Delete product", store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
       <%= link_to "Back to Products", store_products_path(@store), class: "btn btn-primary" %>
     </div>
   </div>
