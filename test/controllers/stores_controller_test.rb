@@ -6,7 +6,7 @@ class StoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get create" do
+  test "should get created" do
     get stores_create_url
     assert_response :success
   end
